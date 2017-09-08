@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+		}
+		table, td, th {
+    		border-style: solid;
+    		border-width: 1px;
+		}
+	</style>
+	<title>Test 3</title>
+	<script type="text/javascript">
+		var v1, v2, v3, v4, tot;
+
+		function getTot(){
+
+			v1 = +document.getElementById("val1").innerHTML;
+			v2 = +document.getElementById("val2").innerHTML;
+			v3 = +document.getElementById("val3").innerHTML;
+			v4 = +document.getElementById("val4").innerHTML;
+
+
+			tot = v1 + v2 + v3 + v4;
+
+			document.getElementById("total").innerHTML = tot;
+		}
+
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+		<tr>
+			<td>Rent</td>
+			<td id="val1" contenteditable="true" oninput="getTot()">400</td>		
+		</tr>
+		<tr>
+			<td>Food</td>
+			<td id="val2" contenteditable="true" oninput="getTot()">200</td>
+		</tr>
+		<tr>
+			<td>Entertainment</td>
+			<td id ="val3" contenteditable="true" oninput="getTot()">100</td>
+		</tr>
+		<tr>
+			<td>Transportation</td>
+			<td id = "val4" contenteditable="true" oninput="getTot()">50</td>
+		</tr>
+		<tr>
+			<td><strong>Total</strong></td>
+			<td id="total">750</td>
+		</tr>
+	</table>
+</body>
+</html>
